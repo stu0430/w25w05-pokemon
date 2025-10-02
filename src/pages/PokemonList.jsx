@@ -1,0 +1,28 @@
+// import { Link } from 'react-router-dom'
+import PokemonCard from '../components/PokemonCard'
+
+export default function PokemonList() {
+  const pokemons = [
+    { id: 1, name: '피카츄' },
+    { id: 2, name: '이상해씨' },
+    { id: 3, name: '이상해풀' },
+    { id: 4, name: '이상해꽃' },
+    { id: 5, name: '파이리' },
+    { id: 6, name: '리자드' },
+    { id: 7, name: '리자몽' },
+    { id: 8, name: '꼬부기' },
+    { id: 9, name: '어니부기' },
+    { id: 10, name: '거북왕' },
+  ]
+
+  return (
+    <div>
+      <h1>포켓몬 도감</h1>
+      <div>
+        {pokemons.map(p => (
+            <PokemonCard key={p.id} pokemon={p} />
+        ))}
+      </div>
+    </div>
+  )
+}
